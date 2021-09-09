@@ -1,0 +1,85 @@
+.table {
+  font-size: 20px;
+}
+td {
+  border-radius: 10px;
+}
+.table td {
+  padding: 20px;
+  border: 1px solid;
+}
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  background-color: #fff;
+  padding-top: 20px;
+  padding: 10px;
+}
+#hide {
+  padding: 5px;
+  width: 50px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid;
+  text-align: center;
+  font-weight: bold;
+}
+button {
+  margin: 0;
+}
+li:hover,
+li.active {
+  cursor: pointer;
+  color: red;
+}
+li {
+  list-style-type: none; /* Убираем маркеры */
+  display: inline;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+#pagination {
+  text-align: center;
+  padding: 5px;
+}
+.list li {
+  margin: 25px;
+}
+.sort {
+  padding-top: 20px;
+  text-align: center;
+}
+.sort p:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+  
+.sort p {
+  margin: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  display: inline;
+  border-radius: 10px;
+  border: 1px solid;
+ 
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 15px solid #f2f6f8;
+
+  border-collapse: collapse;
+}
+.table th {
+  padding: 5px;
+  background: #f2f8f8;
+}
+.table td {
+  padding: 5px;
+  border-top: 5px solid;
+}
