@@ -1,11 +1,9 @@
-.table {
-  font-size: 20px;
-}
+button:active {padding: 0;}
 td {
   border-radius: 10px;
 }
 .btn {
-  margin: 10px;
+  margin: 13px;
   border-radius: 22px;
   background-color: white;
   font-size: 17px;
@@ -14,18 +12,12 @@ td {
 .button { 
   padding-left: 300px;
 }
-.table td {
-  padding: 20px;
-  border: 1px solid;
-}
 main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   width: 50%;
   background-color: #fff;
   padding-top: 20px;
   padding: 10px;
+  
 }
 #hide {
   padding: 5px;
@@ -72,9 +64,9 @@ li {
 .sort p {
   margin: 8px;
   padding: 10px 15px;
-  font-weight: bold;
   display: inline;
-  border-radius: 10px;
+  font-weight: bold;
+  border-radius: 25px;
   border: 1px solid;
  
 }
@@ -82,7 +74,8 @@ li {
   width: 100%;
   margin-bottom: 20px;
   border: 15px solid #f2f6f8;
-
+  border-radius: 25px;
+  font-size: 17px;
   border-collapse: collapse;
 }
 .table th {
@@ -92,4 +85,5 @@ li {
 .table td {
   padding: 5px;
   border-top: 5px solid;
+  border: 1px solid;
 }

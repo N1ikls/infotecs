@@ -1,8 +1,10 @@
 "use strict";
 async function JSON() {
-  let url = "http://localhost:3000/JSON";
+  let url =
+    "https://raw.githubusercontent.com/N1ikls/infotecs/master/json.json";
   let response = await fetch(url);
-  let json = await response.json(); // читаем ответ в формате JSON
+  let json = await response.json();
+  json = json.JSON; // читаем ответ в формате JSON
   console.log(json); // проверяем получили ли ответ
 
   let count = 10; // количество страниц выведенных
@@ -46,7 +48,8 @@ async function JSON() {
   let button = document.querySelectorAll("#sort p");
   let btn = document.querySelector(".btn");
   let click = 0;
-  btn.addEventListener("click", function () { // фунцкия закрытия открытия таблицы
+  btn.addEventListener("click", function () {
+    // фунцкия закрытия открытия таблицы
     table.innerHTML = " ";
     click++;
     if (click == 2) {
@@ -65,7 +68,8 @@ async function JSON() {
         }
       });
       t.innerHTML = " ";
-      for (let tr of sorted) { // добавляем на экран
+      for (let tr of sorted) {
+        // добавляем на экран
         t.appendChild(tr);
       }
     });
@@ -82,7 +86,8 @@ async function JSON() {
     for (let i in json) {
       notes.push(json[i]);
     }
-    if (pag == 1) { // проверка пагинации
+    if (pag == 1) {
+      // проверка пагинации
       notes = notes.slice(0, 10);
     }
     if (pag == 2) {
@@ -115,7 +120,23 @@ async function JSON() {
       tr.appendChild(td);
 
       td = document.createElement("td");
-      td.innerHTML = notes[note].about;
+
+      let k = 0;
+      let q = 0;
+      for (let i in notes[note].about) { // цикл позвояляет (после нахождения второго предложения ставим многоточие)
+        k++;
+
+        if (notes[note].about[i] == ".") {
+          q++;
+        }
+        if (q == 2) {
+          td.innerHTML = notes[note].about.slice(0, k) + "...";
+          q = 0;
+          break;
+        }
+      }
+      console.log(notes[note].about);
+
       tr.appendChild(td);
 
       td = document.createElement("td");
@@ -128,6 +149,7 @@ async function JSON() {
       let square = document.querySelector(`.color_${note}`);
       square.style.backgroundColor = `${notes[note].eyeColor}`;
       square.style.width = `70px`;
+      square.style.borderRadius = "25px 25px 25px 25px";
     }
   }
 }
