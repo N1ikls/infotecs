@@ -27,7 +27,7 @@ async function JSON() {
   }
 
   showPage(items[0]); // Чтобы отображалось хотябы 1 (пагинация )
-  
+
   let active; // стиль чтобы знать на каком номере мы остановились
   for (let item of items) {
     item.addEventListener("click", function () {
@@ -44,6 +44,16 @@ async function JSON() {
   let t = document.querySelector("#table");
   let trs = document.querySelectorAll("#table tr");
   let button = document.querySelectorAll("#sort p");
+  let btn = document.querySelector(".btn");
+  let click = 0;
+  btn.addEventListener("click", function () { // фунцкия закрытия открытия таблицы
+    table.innerHTML = " ";
+    click++;
+    if (click == 2) {
+      showPage(items[0]);
+      click = 0;
+    }
+  });
   for (let i in button) {
     // сортировка по кнопкам
     button[i].addEventListener("click", () => {
@@ -55,12 +65,11 @@ async function JSON() {
         }
       });
       t.innerHTML = " ";
-      for (let tr of sorted) {
+      for (let tr of sorted) { // добавляем на экран
         t.appendChild(tr);
       }
     });
   }
-
   function showPage(item) {
     // вывод таблицы
     // функция пагинации
@@ -73,7 +82,7 @@ async function JSON() {
     for (let i in json) {
       notes.push(json[i]);
     }
-    if (pag == 1) {
+    if (pag == 1) { // проверка пагинации
       notes = notes.slice(0, 10);
     }
     if (pag == 2) {
@@ -111,16 +120,15 @@ async function JSON() {
 
       td = document.createElement("td");
       td.className += `color_${note}`;
-      td.innerHTML = ' ';
+      td.innerHTML = " ";
       tr.appendChild(td);
-      console.log(note)
     }
-    for (let note in notes) { // чтобы поменять цвета в блоке
+    for (let note in notes) {
+      // чтобы поменять цвета в блоке
       let square = document.querySelector(`.color_${note}`);
       square.style.backgroundColor = `${notes[note].eyeColor}`;
       square.style.width = `70px`;
-      }
+    }
   }
-  
 }
 JSON(); // запуск функции

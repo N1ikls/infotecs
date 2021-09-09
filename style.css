@@ -4,6 +4,16 @@
 td {
   border-radius: 10px;
 }
+.btn {
+  margin: 10px;
+  border-radius: 22px;
+  background-color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+.button { 
+  padding-left: 300px;
+}
 .table td {
   padding: 20px;
   border: 1px solid;
