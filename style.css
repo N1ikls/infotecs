@@ -77,6 +77,8 @@ li {
   border-radius: 25px;
   font-size: 17px;
   border-collapse: collapse;
+  background: white; /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .table th {
   padding: 5px;
