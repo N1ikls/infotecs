@@ -130,7 +130,7 @@ async function JSON() {
           q++;
         }
         if (q == 2) {
-          td.innerHTML = notes[note].about.slice(0, k) + "...";
+          td.innerHTML = notes[note].about.slice(0, k) + "..";
           q = 0;
           break;
         }
