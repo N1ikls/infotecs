@@ -5,19 +5,28 @@
     <title>Тестовое задание</title>
   </head>
   <body>
-    <main>
-      
-      <div class="container">
-        
-        <ul class="list" id="pagination"></ul>
-        <p  class="sort" id="sort"></p>
-        <table class="table" id="table">
-          <div class="button">
-            <button class="btn">Close/Open</button>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container _container">
+          <div class="header__list">
+            <ul class="list" id="pagination"></ul>
           </div>
-        </table>
-      </div>
-    </main>
+          <div class="header__sort">
+            <p class="sort" id="sort"></p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main__table">
+          <table class="table" id="table">
+            <div class="button">
+              <button class="btn">Close/Open</button>
+            </div>
+          </table>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
     <script src="js.js"></script>
   </body>
 </html>

@@ -123,7 +123,8 @@ async function JSON() {
 
       let k = 0;
       let q = 0;
-      for (let i in notes[note].about) { // цикл позвояляет (после нахождения второго предложения ставим многоточие)
+      for (let i in notes[note].about) {
+        // цикл позвояляет (после нахождения второго предложения ставим многоточие)
         k++;
 
         if (notes[note].about[i] == ".") {
@@ -135,7 +136,6 @@ async function JSON() {
           break;
         }
       }
-      console.log(notes[note].about);
 
       tr.appendChild(td);
 
